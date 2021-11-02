@@ -1,0 +1,74 @@
+$color_error: #ff4242;
+$color_theme: var(--theme_main_color);
+$background: var(--theme_background_img);
+
+/* 商城图标 */
+$logo_radius: var(--mall_head_img_radius);
+$logo_size: var(--mall_head_img_size);
+
+/* 卡片与上方的间距 */
+$card_wrapper_top: calc(#{$logo_size} + 20px);
+$card_wrapper_top_forget: var(--card_wrapper_top_forget);
+
+/* 商城名称 */
+$title_color: var(--mall_name_color);
+$title_font_size: var(--mall_name_font_size);
+$title_font_weight: var(--mall_name_font_weight);
+$title_top: var(--mall_name_top);
+$title_bottom: var(--mall_name_bottom);
+$title_space: var(--mall_name_letter_space);
+
+/* 输入框 */
+$input_color: var(--input_color);
+$input_placeholder_color: var(--input_placeholder_color);
+$input_font_size: var(--input_font_size);
+$input_font_weight: var(--input_font_weight);
+$input_gap: var(--input_gap);
+$input_border: 2px solid rgb(243, 243, 243);
+$input_icon_margin_right: 5px;
+
+/* 提交按钮 */
+$button_margin_top: var(--login_button_margin_top);
+$button_height: var(--login_button_height);
+$button_width: var(--login_button_width);
+$button_border_radius: var(--login_button_border_radius);
+$button_color: var(--login_button_color);
+$button_background_color: $color_theme;
+$button_font_size: var(--login_button_font_size);
+$button_font_weight: var(--login_button_font_weight);
+$button_font_letter_spacing: var(--login_button_font_letter_spacing);
+
+/* 注册 */
+$go_register_top: var(--go_register_top);
+
+/* 链接、文字与辅助性颜色 */
+$text_font_size: var(--text_font_size);
+$text_font_weight: var(--text_font_weight);
+$text_color: var(--text_color);
+$link_color: var(--link_color);
+$assistant_color: var(--assistant_color);
+
+/* 关于信息 */
+$footer_color: var(--bottom_cv_color);
+$footer_font_size: var(--bottom_cv_font_size);
+$footer_font_weight: var(--bottom_cv_font_weight);
+$footer_space: var(--bottom_cv_letter_space);
+$footer_height: 50px;
+
+/* 注册_ */
+/* 字体大小, 字体颜色 _ 上传头像和选择性别label */
+$avatar_label_font_size: var(--avatar_label_font_size);
+$avatar_label_font_color: var(--avatar_label_font_color);
+
+/* 注册_ */
+/* 上传头像 */
+$upload_avatar_font_size: var(--avatar_font_size);
+$upload_avatar_font_color: var(--avatar_font_color); 
+$upload_avatar_img_size: var(--avatar_img_size);
+$upload_avatar_delete_icon_color: var(--avatar_delete_icon_color);
+
+/* 注册_ */
+/* 字体大小, 字体颜色 _ 性别选择 */
+$sex_select_font_size: var(--sex_select_font_size);
+$sex_select_font_color: var(--sex_select_font_color);
+$sex_select_font_color_checked: var(--sex_select_font_color_checked);
