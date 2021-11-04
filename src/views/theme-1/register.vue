@@ -119,7 +119,7 @@
           />
         </li>
 
-        <li class="form-item" v-if="visible_code">
+        <li class="form-item">
           <icon-base class="icon" :width="iconSize" :height="iconSize" iconColor>
             <captcha-icon />
           </icon-base>
@@ -295,9 +295,9 @@ export default {
       选择头像及选择性别: {},
       上传图片: {},
       性别选项: {},
-      自定义元素: {
-        tip: "控制元素的显示和隐藏",
-      },
+      // 自定义元素: {
+      //   tip: "控制元素的显示和隐藏",
+      // },
       底部介绍: {},
     },
 
@@ -310,14 +310,14 @@ export default {
     theme_background_img: new WBPropertyUtil.Image(
       "主题配置",
       "主题背景",
-      "https://cdn.ssssmall.com/dms/shared/compoents/wb-login-hydrogenium/background.jpg"
+      "https://cdn.rmao.cn/dms/shared/compoents/wb-login-hydrogenium/background.jpg"
     ),
 
     /* 商城图标 */
     mall_head_img: new WBPropertyUtil.Image(
       "商城图标",
       "商城图标",
-      "https://cdn.ssssmall.com/dms/shared/compoents/wb-login-hydrogenium/avator.jpg"
+      "https://cdn.rmao.cn/dms/shared/compoents/wb-login-hydrogenium/avator.jpg"
     ),
     mall_head_img_size: new WBPropertyUtil.PixelSlider(
       "商城图标",
@@ -595,12 +595,12 @@ export default {
       "#ff8c44"
     ),
 
-    /* 控制元素是否显示 */
-    visible_code: new WBPropertyUtil.Switch(
-      "自定义元素",
-      "是否显示验证码输入框",
-      true
-    ),
+    // /* 控制元素是否显示 */
+    // visible_code: new WBPropertyUtil.Switch(
+    //   "自定义元素",
+    //   "是否显示验证码输入框",
+    //   true
+    // ),
 
     /* 底部介绍 */
     bottom_cv_color: new WBPropertyUtil.ColorPicker(

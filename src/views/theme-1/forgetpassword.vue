@@ -111,7 +111,7 @@ export default {
     theme_background_img: new WBPropertyUtil.Image(
       "主题配置",
       "主题背景",
-      "https://cdn.ssssmall.com/dms/shared/compoents/wb-login-hydrogenium/background.jpg"
+      "https://cdn.rmao.cn/dms/shared/compoents/wb-login-hydrogenium/background.jpg"
     ),
     card_wrapper_top_forget: new WBPropertyUtil.PixelSlider(
       "主题配置",

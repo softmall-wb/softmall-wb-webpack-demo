@@ -122,14 +122,14 @@ export default {
     theme_background_img: new WBPropertyUtil.Image(
       "主题配置",
       "主题背景",
-      "https://cdn.ssssmall.com/dms/shared/compoents/wb-login-hydrogenium/background.jpg"
+      "https://cdn.rmao.cn/dms/shared/compoents/wb-login-hydrogenium/background.jpg"
     ),
 
     /* 商城图标 */
     mall_head_img: new WBPropertyUtil.Image(
       "商城图标",
       "商城图标",
-      "https://cdn.ssssmall.com/dms/shared/compoents/wb-login-hydrogenium/avator.jpg"
+      "https://cdn.rmao.cn/dms/shared/compoents/wb-login-hydrogenium/avator.jpg"
     ),
     mall_head_img_size: new WBPropertyUtil.PixelSlider(
       "商城图标",
@@ -324,7 +324,7 @@ export default {
     visible_password: new WBPropertyUtil.Switch(
       "自定义元素",
       "显示密码输入框/验证码输入框",
-      true
+      false
     ),
     visible_remember: new WBPropertyUtil.Switch(
       "自定义元素",
