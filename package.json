@@ -11,8 +11,8 @@
     "core-js": "^3.6.5",
     "node-sass": "^6.0.1",
     "rollup": "^2.56.3",
-    "rollup-plugin-softmall-wb": "file:./lib/rollup-plugin-softmall-wb-0.0.1.tgz",
-    "softmall-wb": "file:./lib/softmall-wb-0.0.1.tgz",
+    "rollup-plugin-softmall-wb": "file:lib/rollup-plugin-softmall-wb-0.0.1.tgz",
+    "softmall-wb": "file:lib/softmall-wb-0.0.1.tgz",
     "vue": "^2.6.11"
   },
   "devDependencies": {

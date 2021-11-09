@@ -284,19 +284,19 @@ export default {
       formItems: {
         phone: {
           placeholder: "请输入手机号",
-          defaultErrorMsg: "请输入正确的手机号",
+          defaultErrorMsg: "请输入手机号",
         },
         captcha: {
           placeholder: "请输入验证码",
-          defaultErrorMsg: "验证码错误",
+          defaultErrorMsg: "请输入验证码",
         },
         password: {
           placeholder: "请输入新的密码",
-          defaultErrorMsg: "密码格式错误",
+          defaultErrorMsg: "请输入新的密码",
         },
         confirmPassword: {
           placeholder: "请再次输入密码",
-          defaultErrorMsg: "密码格式错误",
+          defaultErrorMsg: "请再次输入密码",
         },
       },
       formData: {
@@ -426,11 +426,12 @@ export default {
 
 /* 校验错误样式 */
 .error {
+  color: $color-error !important;
   border-bottom: 2px solid $color-error !important;
   transition: 0.3s;
 }
 .error::placeholder {
-  color: $color-error;
+  color: $color-error !important;
 }
 /* 校验错误样式 */
 

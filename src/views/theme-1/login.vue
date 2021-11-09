@@ -147,7 +147,15 @@ export default {
     ),
 
     /* 商城名称 */
-    mall_name: new WBPropertyUtil.Input("商城名称", "商城名称", "软猫"),
+    mall_name: new WBPropertyUtil.Input(
+      "商城名称",
+      "商城名称",
+      "软猫",
+      "商城名称",
+      true,
+      true,
+      30
+    ),
     mall_name_color: new WBPropertyUtil.ColorPicker(
       "商城名称",
       "文字颜色",
@@ -324,7 +332,7 @@ export default {
     visible_password: new WBPropertyUtil.Switch(
       "自定义元素",
       "显示密码输入框/验证码输入框",
-      false
+      true
     ),
     visible_remember: new WBPropertyUtil.Switch(
       "自定义元素",
@@ -405,15 +413,15 @@ export default {
       formItems: {
         phone: {
           placeholder: "请输入手机号",
-          defaultErrorMsg: "请输入正确的手机号",
+          defaultErrorMsg: "请输入手机号",
         },
         password: {
           placeholder: "请输入密码",
-          defaultErrorMsg: "请输入正确的密码",
+          defaultErrorMsg: "请输入密码",
         },
         captcha: {
           placeholder: "请输入验证码",
-          defaultErrorMsg: "请输入正确的验证码",
+          defaultErrorMsg: "请输入验证码",
         },
       },
       codeCheck,
@@ -539,6 +547,7 @@ export default {
   border-radius: $logo-radius;
 }
 .login-logo_title {
+  // overflow: hidden;
   margin: auto;
   display: block;
   text-align: center;
@@ -548,7 +557,7 @@ export default {
   margin-top: $title-top;
   padding-bottom: $title-bottom;
   letter-spacing: $title-space;
-  white-space: nowrap;
+  white-space: normal;
 }
 .form-item {
   display: flex;
@@ -586,11 +595,12 @@ export default {
 
 /* 校验错误样式 */
 .error {
+  color: $color-error !important;
   border-bottom: 2px solid $color-error !important;
   transition: 0.3s;
 }
 .error::placeholder {
-  color: $color-error;
+  color: $color-error !important;
 }
 /* 校验错误样式 */
 

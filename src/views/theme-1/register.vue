@@ -335,7 +335,15 @@ export default {
     ),
 
     /* 商城名称 */
-    mall_name: new WBPropertyUtil.Input("商城名称", "商城名称", "软猫"),
+    mall_name: new WBPropertyUtil.Input(
+      "商城名称",
+      "商城名称",
+      "软猫",
+      "商城名称",
+      true,
+      true,
+      30
+    ),
     mall_name_color: new WBPropertyUtil.ColorPicker(
       "商城名称",
       "文字颜色",
@@ -720,39 +728,39 @@ export default {
       formItems: {
         username: {
           placeholder: "请输入您的用户名",
-          defaultErrorMsg: "用户名错误",
+          defaultErrorMsg: "请输入您的用户名",
         },
         phone: {
           placeholder: "请输入您的手机号",
           defaultErrorMsg: "请输入正确的手机号",
         },
         password: {
-          placeholder: "请输入新的密码",
-          defaultErrorMsg: "密码格式错误",
+          placeholder: "请输入密码",
+          defaultErrorMsg: "请输入密码",
         },
         confirmPassword: {
           placeholder: "请再次输入密码",
-          defaultErrorMsg: "密码格式错误",
+          defaultErrorMsg: "请输入密码",
         },
         wechat: {
           placeholder: "请输入您的微信号",
-          defaultErrorMsg: "微信号错误",
+          defaultErrorMsg: "请输入您的微信号",
         },
         mail: {
           placeholder: "请输入您的邮箱",
-          defaultErrorMsg: "邮箱格式错误",
+          defaultErrorMsg: "请输入您的邮箱",
         },
         qq: {
           placeholder: "请输入您的QQ号",
-          defaultErrorMsg: "QQ号错误",
+          defaultErrorMsg: "请输入您的QQ号",
         },
         alipay: {
           placeholder: "请输入您的支付宝账号",
-          defaultErrorMsg: "支付宝账号错误",
+          defaultErrorMsg: "请输入您的支付宝账号",
         },
         captcha: {
           placeholder: "请输入验证码",
-          defaultErrorMsg: "验证码错误",
+          defaultErrorMsg: "请输入验证码",
         },
       },
       formData: {
@@ -883,6 +891,7 @@ export default {
   border-radius: $logo-radius;
 }
 .register-logo_title {
+  // overflow: hidden;
   margin: auto;
   display: block;
   text-align: center;
@@ -890,9 +899,9 @@ export default {
   font-size: $title-font-size;
   font-weight: $title-font-weight;
   margin-top: $title-top;
-  margin-bottom: $title-bottom;
+  padding-bottom: $title-bottom;
   letter-spacing: $title-space;
-  white-space: nowrap;
+  white-space: normal;
 }
 .form-item {
   display: flex;
@@ -933,11 +942,12 @@ export default {
 
 /* 校验错误样式 */
 .error {
+  color: $color-error !important;
   border-bottom: 2px solid $color-error !important;
   transition: 0.3s;
 }
 .error::placeholder {
-  color: $color-error;
+  color: $color-error !important;
 }
 /* 校验错误样式 */
 
