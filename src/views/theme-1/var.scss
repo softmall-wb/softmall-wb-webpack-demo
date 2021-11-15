@@ -46,8 +46,8 @@ $go_register_top: var(--go_register_top);
 
 /* 链接、文字与辅助性颜色 */
 $text-font-zoom: var(--text_font_zoom);
-$text_font_size: 15px;
-// $text_font_size: var(--text_font_size);
+// $text_font_size: 15px;
+$text_font_size: var(--text_font_size);
 $text_font_weight: var(--text_font_weight);
 $text_color: var(--text_color);
 $link_color: var(--link_color);
