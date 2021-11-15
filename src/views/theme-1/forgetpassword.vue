@@ -60,7 +60,7 @@
           <button @click="submit" class="form-submit"><p>确认修</p><p>改</p></button>
         </li>
       </ul>
-      <footer class="forget-password-footer">技术支持 | 软猫</footer>
+      <footer class="forget-password-footer">{{bottom_cv_text}}</footer>
     </div>
   </div>
 </template>
@@ -94,7 +94,7 @@ export default {
       },
       输入框: {},
       修改按钮: {
-        tip: "获取验证码的字体颜色受此处控制"
+        // tip: "获取验证码的字体颜色受此处控制"
       },
       自定义元素: {
         tip: "控制元素的显示和隐藏",
@@ -122,6 +122,11 @@ export default {
     ),
 
     /* 输入框 */
+    button_captcha_color: new WBPropertyUtil.ColorPicker(
+      "输入框",
+      "获取验证码按钮文字颜色",
+      "rgb(255, 255, 255)"
+    ),
     input_color: new WBPropertyUtil.ColorPicker(
       "输入框",
       "文字颜色",
@@ -154,7 +159,7 @@ export default {
     login_button_font_letter_spacing: new WBPropertyUtil.PixelSlider(
       "修改按钮",
       "字间距",
-      0,
+      1,
       0,
       100
     ),
@@ -437,7 +442,8 @@ export default {
 
 #get-captcha {
   font-size: calc(#{$input-font-size} - 2px);
-  color: $button-color;
+  // color: $button-color;
+  color: $button-captcha-color;
 }
 .form-item button {
   min-width: 5rem;
