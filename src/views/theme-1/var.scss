@@ -38,11 +38,16 @@ $button_font_size: var(--login_button_font_size);
 $button_font_weight: var(--login_button_font_weight);
 $button_font_letter_spacing: var(--login_button_font_letter_spacing);
 
+//获取验证码
+$button-captcha-color: var(--button_captcha_color);
+
 /* 注册 */
 $go_register_top: var(--go_register_top);
 
 /* 链接、文字与辅助性颜色 */
-$text_font_size: var(--text_font_size);
+$text-font-zoom: var(--text_font_zoom);
+$text_font_size: 15px;
+// $text_font_size: var(--text_font_size);
 $text_font_weight: var(--text_font_weight);
 $text_color: var(--text_color);
 $link_color: var(--link_color);
@@ -63,7 +68,7 @@ $avatar_label_font_color: var(--avatar_label_font_color);
 /* 注册_ */
 /* 上传头像 */
 $upload_avatar_font_size: var(--avatar_font_size);
-$upload_avatar_font_color: var(--avatar_font_color); 
+$upload_avatar_font_color: var(--avatar_font_color);
 $upload_avatar_img_size: var(--avatar_img_size);
 $upload_avatar_delete_icon_color: var(--avatar_delete_icon_color);
 

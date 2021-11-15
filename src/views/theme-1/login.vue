@@ -47,10 +47,10 @@
           <button id="get-captcha" @click="sendCode">{{!loginService.able_to_send_vcode? loginService.vcode_second: '获取验证码'}}</button>
         </li>
         <li class="form-item">
-          <div v-if="visible_remember">
+          <div class="keep-password" v-if="visible_remember">
             <input type="checkbox" id="keep-password" v-model="loginService.isRemember" />
             <label for="keep-password">
-              <span class="keep-password">记住密码</span>
+              <span>记住密码</span>
             </label>
           </div>
           <span @click="toChangePassword" class="to-forget-password">忘记密码？</span>
@@ -101,7 +101,7 @@ export default {
       商城名称: {},
       输入框: {},
       登录按钮: {
-        tip: "获取验证码的字体颜色受此处控制",
+        // tip: "获取验证码的字体颜色受此处控制",
       },
       注册与忘记密码: {},
       "链接、文字与辅助性颜色": {
@@ -200,6 +200,11 @@ export default {
     ),
 
     /* 输入框 */
+    button_captcha_color: new WBPropertyUtil.ColorPicker(
+      "输入框",
+      "获取验证码按钮文字颜色",
+      "rgb(255, 255, 255)"
+    ),
     input_color: new WBPropertyUtil.ColorPicker(
       "输入框",
       "文字颜色",
@@ -232,7 +237,7 @@ export default {
     login_button_font_letter_spacing: new WBPropertyUtil.PixelSlider(
       "登录按钮",
       "字间距",
-      0,
+      1,
       0,
       100
     ),
@@ -296,13 +301,21 @@ export default {
     ),
 
     /* 链接、文字与辅助性颜色 */
-    text_font_size: new WBPropertyUtil.PixelSlider(
+    text_font_zoom: new WBPropertyUtil.Slider(
       "链接、文字与辅助性颜色",
       "文字大小",
-      15,
-      10,
-      35
+      1,
+      0.7,
+      2,
+      0.1
     ),
+    // text_font_size: new WBPropertyUtil.PixelSlider(
+    //   "链接、文字与辅助性颜色",
+    //   "文字大小",
+    //   15,
+    //   10,
+    //   35
+    // ),
     text_font_weight: new WBPropertyUtil.Slider(
       "链接、文字与辅助性颜色",
       "文字粗细",
@@ -332,7 +345,7 @@ export default {
     visible_password: new WBPropertyUtil.Switch(
       "自定义元素",
       "显示密码输入框/验证码输入框",
-      true
+      false
     ),
     visible_remember: new WBPropertyUtil.Switch(
       "自定义元素",
@@ -606,7 +619,8 @@ export default {
 
 #get-captcha {
   font-size: calc(#{$input-font-size} - 2px);
-  color: $button-color;
+  // color: $button-color;
+  color: $button-captcha-color;
 }
 .form-item button {
   min-width: 5rem;
@@ -619,12 +633,14 @@ export default {
   color: #fff;
 }
 .keep-password {
+  zoom: $text-font-zoom;
   font-size: $text-font-size;
   font-weight: $text-font-weight;
   color: $text-color;
   vertical-align: middle;
 }
 .to-forget-password {
+  zoom: $text-font-zoom;
   font-size: $text-font-size;
   font-weight: $text-font-weight;
   color: $link-color;
@@ -679,6 +695,7 @@ input[type="checkbox"]:checked::after {
 .form-item.to-register {
   margin-top: $go-register-top;
   justify-content: center;
+  zoom: $text-font-zoom;
   font-size: $text-font-size;
   font-weight: $text-font-weight;
   color: $assistant-color;

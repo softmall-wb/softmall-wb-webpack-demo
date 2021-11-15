@@ -286,7 +286,7 @@ export default {
       表单元素: {},
       输入框: {},
       注册按钮: {
-        tip: "获取验证码的字体颜色受此处控制"
+        // tip: "获取验证码的字体颜色受此处控制"
       },
       转到登录: {},
       "链接、文字与辅助性颜色": {
@@ -402,6 +402,11 @@ export default {
     need_gender: new WBPropertyUtil.Switch("表单元素", "需要选择性别", false),
 
     /* 输入框 */
+    button_captcha_color: new WBPropertyUtil.ColorPicker(
+      "输入框",
+      "获取验证码按钮文字颜色",
+      "rgb(255, 255, 255)"
+    ),
     input_color: new WBPropertyUtil.ColorPicker(
       "输入框",
       "文字颜色",
@@ -434,8 +439,8 @@ export default {
     login_button_font_letter_spacing: new WBPropertyUtil.PixelSlider(
       "注册按钮",
       "字间距",
-      0,
-      0,
+      1,
+      1,
       100
     ),
     login_button_border_radius: new WBPropertyUtil.PixelSlider(
@@ -953,7 +958,8 @@ export default {
 
 #get-captcha {
   font-size: calc(#{$input-font-size} - 2px);
-  color: $button-color;
+  // color: $button-color;
+  color: $button-captcha-color;
 }
 .form-item button {
   min-width: 5rem;
