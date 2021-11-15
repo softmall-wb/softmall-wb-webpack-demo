@@ -3,9 +3,10 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
+    "init": "npm uninstall wb-compiler-cli && npm i ./lib/wb-compiler-cli-1.0.0.tgz -g && npm run build-refresh",
     "serve": "vue-cli-service serve",
-    "refresh": "./refresh.sh",
-    "build-refresh": "cd ../编译器和Service && ./build.sh && cd - && cp ../编译器和Service/*.tgz ./lib/ && ./refresh.sh"
+    "build-refresh": "npm uninstall softmall-wb rollup-plugin-softmall-wb && npm i -D ./lib/softmall-wb-0.0.1.tgz && npm i -D ./lib/rollup-plugin-softmall-wb-0.0.1.tgz",
+    "fix": "cd ./node_modules/rollup-plugin-softmall-wb && npm i softmall-wb-0.0.1.tgz"
   },
   "dependencies": {
     "core-js": "^3.6.5",
