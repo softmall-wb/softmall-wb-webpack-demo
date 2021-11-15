@@ -2,21 +2,28 @@
 
 ### 初始化环境
 ```shell
-chmod +x ./refresh.sh
-./refresh.sh
+npm run init
 npm i
+```
+### 刷新环境
+```shell
+npm run build-refresh
 ```
 
 请查看`编译使用说明.md`来安装编译器环境。
 
-
-### 运行项目
+### 编译一个组件
 ```shell
-wb-compiler-cli theme-1/register -p false -d -w
+wb-compiler-cli hydrogenium/register -p false -d -w
 ```
 
-另一个终端运行：
+### 编译一个主题
+```shell
+wb-compiler-cli hydrogenium -p false -d -w
+```
 
+### 运行项目
+另一个终端运行：
 ```shell
 npm run serve
 ```
