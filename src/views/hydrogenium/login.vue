@@ -1,9 +1,9 @@
 <template>
   <div wb:style-var-bind>
-    <div :style="{'background-image': 'url('+ theme_background_img+ ')'}" class="login">
+    <div :style="{'background-image': 'url('+ theme_background_img+ '@w_750,h_750)'}" class="login">
       <ul class="login-form">
         <div class="login-logo">
-          <img style="width: 100%; height: 100%" :src="mall_head_img" alt />
+          <img style="width: 100%; height: 100%" :src="mall_head_img + '@w_200,h_200'" alt />
         </div>
         <div class="login-logo_title">欢迎登录{{ mall_name }}</div>
         <li class="form-item ">
@@ -122,15 +122,16 @@ export default {
     theme_background_img: new WBPropertyUtil.Image(
       "主题配置",
       "主题背景",
-      "https://cdn.rmao.cn/dms/shared/compoents/wb-login-hydrogenium/background.jpg"
+      "https://cdn.rmao.cn/dms/shared/compoents/wb-login-hydrogenium/background.jpg",
     ),
 
     /* 商城图标 */
     mall_head_img: new WBPropertyUtil.Image(
       "商城图标",
       "商城图标",
-      "https://cdn.rmao.cn/dms/shared/compoents/wb-login-hydrogenium/avator.jpg"
+      "https://cdn.rmao.cn/dms/shared/compoents/wb-login-hydrogenium/avator.jpg",
     ),
+
     mall_head_img_size: new WBPropertyUtil.PixelSlider(
       "商城图标",
       "商城图标尺寸",

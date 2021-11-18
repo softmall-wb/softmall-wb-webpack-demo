@@ -1,6 +1,6 @@
 <template>
   <div wb:style-var-bind>
-    <div :style="{'background-image': 'url('+ theme_background_img+ ')'}" class="forget-password">
+    <div :style="{'background-image': 'url('+ theme_background_img+ '@w_750,h_750)'}" class="forget-password">
       <ul class="forget-password-form">
         <li class="form-item">
           <icon-base class="icon" :width="iconSize" :height="iconSize" iconColor>
@@ -111,7 +111,8 @@ export default {
     theme_background_img: new WBPropertyUtil.Image(
       "主题配置",
       "主题背景",
-      "https://cdn.rmao.cn/dms/shared/compoents/wb-login-hydrogenium/background.jpg"
+      "https://cdn.rmao.cn/dms/shared/compoents/wb-login-hydrogenium/background.jpg",
+      url => url + "@w_750,h_750"
     ),
     card_wrapper_top_forget: new WBPropertyUtil.PixelSlider(
       "主题配置",
