@@ -10,7 +10,7 @@ export default {
   props: {},
   data() {
     return {
-      comp: resolve => require(['../compiled/dev/login.shell.vue'], resolve)
+      comp: resolve => require(['../compiled/dev/forgetpassword.shell.vue'], resolve)
     }
   },
 }
