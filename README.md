@@ -2,8 +2,8 @@
 
 ### 第一步、初始化环境
 ```shell
-npm run init
 npm i
+npm run init
 ```
 
 ### 第二步、刷新环境
