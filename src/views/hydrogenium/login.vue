@@ -401,7 +401,10 @@ export default {
 
     codeCheck
       // .error(e => this.errorPop('captcha', e))
-      .error(e => this.verifyFail({ name: "captcha", errorMsg: e }))
+      .error(e => {
+        this.verifyFail({ name: "captcha", errorMsg: e })
+        this.loginService.vcode = ""
+      })
       .empty(() => this.verifyFail({ name: "captcha" }))
 
     passwordCheck

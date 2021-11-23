@@ -6,6 +6,7 @@
     "init": "npm run build-refresh && npm uninstall wb-compiler-cli -g && npm i ./lib/wb-compiler-cli-1.0.0.tgz -g",
     "serve": "vue-cli-service serve",
     "build-refresh": "npm uninstall softmall-wb rollup-plugin-softmall-wb -g && npm i -D ./lib/softmall-wb-0.0.1.tgz && npm i -D ./lib/rollup-plugin-softmall-wb-0.0.1.tgz",
+    "build-refresh-in-macos": "cd ../编译器和Service && ./build.sh && cd - && cp ../编译器和Service/*.tgz ./lib/ && npm run build-refresh",
     "fix": "cd ./node_modules/rollup-plugin-softmall-wb && npm i softmall-wb-0.0.1.tgz"
   },
   "dependencies": {

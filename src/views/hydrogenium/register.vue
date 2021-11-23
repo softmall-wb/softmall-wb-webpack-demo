@@ -674,7 +674,10 @@ export default {
       .empty(() => this.verifyFail({ name: "confirmPassword" }))
     codeCheck
       // .error(e => this.errorPop('captcha', e))
-      .error(e => this.verifyFail({ name: "captcha", errorMsg: e }))
+      .error(e => {
+        this.verifyFail({ name: "captcha", errorMsg: e })
+        this.registerService.vcode = ""
+      })
       .empty(() => this.verifyFail({ name: "captcha" }))
     wechat
       // .error(e => this.errorPop('wechat', e))
