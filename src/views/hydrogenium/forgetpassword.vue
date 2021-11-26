@@ -12,6 +12,7 @@
             @input="handleInput"
             :placeholder="formItems.phone.placeholder"
             type="text"
+            maxlength="11"
             v-model="forgetService.phone"
             :disabled="!forgetService.isPhoneEditable"
           />

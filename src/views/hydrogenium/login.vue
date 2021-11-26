@@ -15,7 +15,8 @@
             name="phone"
             @input="handleInput"
             :placeholder="formItems.phone.placeholder"
-            type="number"
+            type="text"
+            maxlength="11"
             v-model="loginService.phone"
           />
         </li>
