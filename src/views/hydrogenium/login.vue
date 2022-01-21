@@ -1,3 +1,4 @@
+<!-- { "name": "oxygen-login", "type": "商城组件/登录", "mode": 4 } -->
 <template>
   <div wb:style-var-bind>
     <div :style="{'background-image': 'url('+ theme_background_img+ '@w_750,h_750)'}" class="login">

@@ -1,0 +1,175 @@
+.form-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: $input-gap;
+  border-radius: $input_height;
+  background-color: #fff;
+  padding: 0 15px;
+}
+
+.form-item.form-input {
+  padding-right: 0;
+  -moz-box-shadow: 0px 4px 5px #FEF4E7;
+  -webkit-box-shadow: 0px 4px 5px #FEF4E7;
+  box-shadow: 0px 4px 5px #FEF4E7;
+}
+
+.logo_title {
+  // overflow: hidden;
+  width: 94vw;
+  margin: auto;
+  display: block;
+  text-align: left;
+  color: $title-color;
+  font-size: $title-font-size;
+  font-weight: $title-font-weight;
+  margin-top: $title-top;
+  padding-bottom: $title-bottom;
+  letter-spacing: $title-space;
+  white-space: normal;
+}
+
+.icon {
+  width: auto;
+  height: auto;
+  fill: $color-theme;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.icon::after {
+  content: "";
+  width: 1px;
+  display: block;
+  height: 18px;
+  border-radius: 1px;
+  margin: 0 10px;
+  background-color: rgb(223, 220, 221);
+}
+
+.form-item>input {
+  height: $input_height;
+  width: 0;
+  outline-style: none;
+  flex: 1;
+  border: 0;
+  padding: 5px 5px;
+  color: $input-color;
+  font-size: $input-font-size;
+  font-weight: $input-font-weight;
+  background-color: rgba($color: #000000, $alpha: 0);
+}
+
+.form-item>input::-webkit-input-placeholder {
+  color: $input_placeholder_color;
+}
+
+.form-item>input::-moz-placeholder {
+  color: $input_placeholder_color;
+}
+
+.form-item>input::-ms-input-placeholder {
+  color: $input_placeholder_color;
+}
+
+.form-item>input:-moz-placeholder {
+  color: $input_placeholder_color;
+}
+
+/* 校验错误样式 */
+.error {
+  color: $color-error !important;
+  transition: 0.3s;
+}
+
+.error::placeholder {
+  color: $color-error !important;
+}
+
+/* 校验错误样式 */
+
+#get-captcha {
+  font-size: calc(#{$input-font-size} - 2px);
+  // color: $button-color;
+  color: $button-captcha-color;
+}
+
+.form-item button {
+  min-width: 5rem;
+  height: calc($input_height - 6px);
+  background-color: $color-theme;
+  margin: 0 5px;
+  padding: 2px 8px;
+  border: 0;
+  border-radius: $input_height;
+  color: #fff;
+}
+
+.keep-password {
+  zoom: $text-font-zoom;
+  font-size: $text-font-size;
+  font-weight: $text-font-weight;
+  color: $text-color;
+  vertical-align: middle;
+}
+
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  appearance: none;
+  outline: none;
+  margin: 0;
+  width: 1rem;
+  height: 1rem;
+  cursor: pointer;
+  vertical-align: center;
+  background: #fff;
+  border: 1px solid #ccc;
+  position: relative;
+  vertical-align: middle;
+}
+
+input[type="checkbox"]:checked::after {
+  content: "\2713";
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  line-height: 1rem;
+  color: $color-theme;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.submit {
+  margin-top: $button-margin-top;
+}
+
+.form-item>.form-submit {
+  margin: auto;
+  // width: 100%;
+  width: $submit_button_size;
+  height: $submit_button_size;
+  color: $button-color;
+  border-radius: 100%;
+  background-color: #fd8b45;
+  background-image: linear-gradient(135deg, #fd8b45 0%, #fe6657 100%);
+  box-shadow: 0px 3px 5px 0px $color-theme;
+  -webkit-box-shadow: 0px 3px 5px 0px $color-theme;
+  -moz-box-shadow: 0px 3px 5px 0px $color-theme;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-item>.form-submit>svg {
+  fill: $button_color;
+}
+
+.form-submit>p {
+  margin: 0;
+}
+
+.form-submit>p:first-letter {
+  letter-spacing: $button_font_letter_spacing;
+}

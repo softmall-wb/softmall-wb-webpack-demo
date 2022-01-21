@@ -1,0 +1,111 @@
+.form-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: $input_gap;
+}
+.icon {
+  margin-right: $input-icon-margin-right;
+  fill: $color-theme;
+}
+
+.form-item > p{
+  height: $input_height;
+  border-radius: $input_border_radius 0 0 $input_border_radius;
+  padding: 0 10px;
+  line-height: $input_height;
+  font-size: $input-font-size;
+  background-color: $input_background_color;
+}
+.form-item > input {
+  width: 0;
+  height: $input_height;
+  border-radius:0 $input_border_radius $input_border_radius 0;
+  outline-style: none;
+  flex: 1;
+  border: 0;
+  color: $input-color;
+  font-size: $input-font-size;
+  font-weight: $input-font-weight;
+  background-color: $input_background_color;
+  // border-bottom: $input-border;
+}
+
+.form-item > input::-webkit-input-placeholder{
+  color: $input_placeholder_color;
+}
+.form-item > input::-moz-placeholder{
+  color: $input_placeholder_color;
+}
+ .form-item > input::-ms-input-placeholder{
+  color: $input_placeholder_color;
+}
+ .form-item > input:-moz-placeholder{
+  color: $input_placeholder_color;
+}
+
+.form-item button {
+  min-width: 5rem;
+  height: 24px;
+  background-color: $color-theme;
+  margin: 0 5px;
+  padding: 2px 8px;
+  border: 0;
+  border-radius: 5px;
+  color: #fff;
+}
+.form-item > .form-submit {
+  margin: auto;
+  // width: 100%;
+  width: $button_width;
+  height: $button-height;
+  font-size: $button-font-size;
+  font-weight: $button-font-weight;
+  color: $button-color;
+  border-radius: $button_border_radius;
+}
+.form-submit > p{
+  margin: 0;
+  display: inline-block;
+}
+.form-submit > p:first-letter{
+  letter-spacing: $button_font_letter_spacing;
+}
+.submit {
+  margin-top: $button-margin-top;
+}
+
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  appearance: none;
+  outline: none;
+  margin: 0;
+  width: 1rem;
+  height: 1rem;
+  cursor: pointer;
+  vertical-align: center;
+  background: #fff;
+  border: 1px solid #ccc;
+  position: relative;
+  vertical-align: middle;
+}
+input[type="checkbox"]:checked::after {
+  content: "\2713";
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  line-height: 1rem;
+  color: $color-theme;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+#get-captcha {
+  font-size: calc(#{$input-font-size} - 2px);
+  // color: $button-color;
+  background-color: $input_background_color;
+  color: $button-captcha-color;
+  height: $input_height;
+  border-radius: $input_border_radius;
+}
+

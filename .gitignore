@@ -7,3 +7,4 @@ tsconfig.tsbuildinfo
 package-lock*
 compiled/
 src/components/wb-login-*.vue
+lib/
